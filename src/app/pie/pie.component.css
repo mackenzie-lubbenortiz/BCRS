@@ -1,0 +1,27 @@
+/**
+ * Title: Pie Chart CSS
+ * Author: Mackenzie Lubben-Ortiz
+ * Date: 18 July 2024
+ * Updated: 07/28/2024 by Brock Hemsouvanh
+ * Description: Styles for the Purchase by service pie graph
+ */
+
+ h2 {
+  color: #0F1D4A; /* Dark Blue */
+  font-size: 24px; /* Increase the font size */
+  text-align: center;
+}
+
+.chart-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+#myPieChart {
+  width: 100%;  /* Ensure the chart takes the full width of the container */
+  height: auto;
+}
+
+.container {
+  margin-top: 80px; /* Add space to push content below the navbar */
+}

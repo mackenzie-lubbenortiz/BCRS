@@ -1,0 +1,38 @@
+
+.text-color {
+  color: #0F1D4A; /* Dark Blue */
+}
+
+.btn-color {
+  background-color: #0F1D4A; /* Dark Blue */
+  color: #fff;
+}
+
+.btn-size {
+  width: 25%;
+}
+
+.pl-3 {
+  padding-left: 10px;
+}
+
+.container {
+  margin-bottom: 100px;
+}
+
+
+.table {
+  width: 100%; /* Ensure the table width does not exceed 100% of the container */
+  table-layout: fixed; /* Fix table layout to ensure columns don't overflow */
+  margin: 0 auto; /* Center the table within the container */
+}
+
+.table th, .table td {
+  word-wrap: break-word; /* Ensure long text wraps within the cell */
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.table-container {
+  margin: 0 auto; /* Center the table container */
+  width: 90%; /* Adjust the width to ensure it stays within the page */
+}

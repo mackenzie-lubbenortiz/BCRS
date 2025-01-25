@@ -1,0 +1,63 @@
+/* Styles for user management cards */
+.user-management-card {
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f5; /* Light silver for active users */
+}
+
+.disabled-card {
+  background-color: #d3d3d3; /* Grey for disabled users */
+}
+
+.greyed-out {
+  color: #a9a9a9; /* Grey color for disabled user text */
+}
+
+.user-management-card .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.user-management-card .card-title {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.user-management-card .card-text {
+  margin: 0;
+  color: #555;
+}
+
+.user-management-card button {
+  margin-left: 10px;
+}
+
+.user-management-card .btn-primary {
+  background-color: #0e1e9f; /* Blue for edit button */
+  border-color: black;
+}
+
+.user-management-card .btn-danger {
+  background-color: #993333; /* Bronze color for delete button */
+  border-color: black;
+}
+
+.user-management-card .btn-success {
+  background-color: #70bce5; /* Light aqua blue color for reactivate button */
+  border-color: black;
+}
+
+.user-management-card .btn-primary:hover,
+.user-management-card .btn-danger:hover,
+.user-management-card .btn-success:hover {
+  opacity: 0.8; /* Slightly reduce opacity on hover for all buttons */
+}

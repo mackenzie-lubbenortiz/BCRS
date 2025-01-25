@@ -1,0 +1,29 @@
+/*
+ * Title: footer.component.css
+ * Author: Phuong Tran,
+ * Date: 07/02/2024
+ * Sources: https://github.com/buwebdev/web-450/tree/master/starter-projects/bcrs
+ */
+
+ .bg-dark-blue{
+   background-color: #0f1d4a !important;
+   color: #fff;
+}
+
+.footer-text {
+   font-size: 18px;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #0f1d4a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  bottom: 0;
+  width: 100%;
+  left: 0; 
+  z-index: 10;
+  margin-top: 100px;
+  position: fixed;
+}

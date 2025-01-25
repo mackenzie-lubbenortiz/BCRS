@@ -1,0 +1,128 @@
+<!--
+  Title: service-request.component.html
+  Authors: Brock Hemsouvanh, Phuong Tran
+  Date: 07/07/2024
+  Updated: 07/26/2024 by Brock Hemsouvanh
+  Description: Service Request component template for BCRS application
+-->
+<br>
+<br>
+<br>
+<div class="row justify-content-center mb-5">
+  <div class="card-size card">
+    <div class="card-body">
+      <div class="width-container row justify-content-center">
+        <div class="row justify-content-center">
+          <div class="my-2 mb-3 row justify-content-center">
+            <br>
+            <h3 class="text-center text-color">Service Request</h3>
+          </div>
+          
+          <div class="col mt-3">
+            <form [formGroup]="serviceRequestForm" (ngSubmit)="onSubmit()">
+              <div class="d-flex flex-column bd-highlight mb-3">
+                <label for="customerFirstName" class="form-label fw-bold">First Name:</label>
+                <input type="text" id="customerFirstName" class="form-control" formControlName="customerFirstName" placeholder="Enter Customer's First Name"/>
+              </div>
+        
+              <div class="d-flex flex-column bd-highlight mb-3">
+                <label for="customerLastName" class="form-label fw-bold">Last Name:</label>
+                <input type="text" id="customerLastName" class="form-control" formControlName="customerLastName" placeholder="Enter Customer's Last Name"/>
+              </div>
+        
+              <div class="d-flex flex-column bd-highlight mb-3">
+                <label for="customerEmail" class="form-label fw-bold">Email:</label>
+                <input type="email" id="customerEmail" class="form-control" formControlName="customerEmail" placeholder="Enter Customer's Email"/>
+              </div>
+        
+              <div class="d-flex flex-column bd-highlight mb-3">
+                <label for="orderDate" class="form-label fw-bold">Date:</label>
+                <input type="date" id="orderDate" class="form-control" formControlName="orderDate" placeholder="Order Date" required />
+              </div>
+        
+              <br>
+              <table class="table table-bordered table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Service Name</th>
+                    <th>Service Price</th>
+                    <th>Select</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Password Reset</td>
+                    <td>$39.99</td>
+                    <td class="align-right"><input type="checkbox" class="form-check-input" data-service-name="Password Reset" data-service-price="39.99"/></td>
+                  </tr>
+                  <tr>
+                    <td>Spyware Removal</td>
+                    <td>$99.99</td>
+                    <td class="align-right"><input type="checkbox" class="form-check-input" data-service-name="Spyware Removal" data-service-price="99.99"/></td>
+                  </tr>
+                  <tr>
+                    <td>RAM Upgrade</td>
+                    <td>$129.99</td>
+                    <td class="align-right"><input type="checkbox" class="form-check-input" data-service-name="RAM Upgrade" data-service-price="129.99"/></td>
+                  </tr>
+                  <tr>
+                    <td>Software Installation</td>
+                    <td>$49.99</td>
+                    <td class="align-right"><input type="checkbox" class="form-check-input" data-service-name="Software Installation" data-service-price="49.99"/></td>
+                  </tr>
+                  <tr>
+                    <td>Keyboard Cleaning</td>
+                    <td>$45.00</td>
+                    <td class="align-right"><input type="checkbox" class="form-check-input" data-service-name="Keyboard Cleaning" data-service-price="45.00"/></td>
+                  </tr>
+                  <tr>
+                    <td>Disk Clean Up</td>
+                    <td>$129.99</td>
+                    <td class="align-right"><input type="checkbox" class="form-check-input" data-service-name="Disk Clean Up" data-service-price="129.99"/></td>
+                  </tr>
+                  <tr>
+                    <td>Software Installation</td>
+                    <td>$49.99</td>
+                    <td class="align-right"><input type="checkbox" class="form-check-input" data-service-name="Software Installation" data-service-price="49.99"/></td>
+                  </tr>
+                </tbody>
+              </table>
+        
+              <br>
+              <br>
+              <div class="mb-3">
+                <label for="additionalPartsServices" class="form-label fw-bold">Additional Part(s)/Service(s):</label>
+                <input type="text" id="additionalPartsServices" class="form-control" formControlName="additionalPartsServices" placeholder="Enter additional parts or services"/>
+              </div>
+              <div class="mb-3">
+                <label for="partsAmount" class="form-label fw-bold">Parts Amount:</label>
+                <input type="number" id="partsAmount" class="form-control" formControlName="partsAmount" placeholder="0" min="0"/>
+              </div>
+              <div class="mb-3">
+                <label for="laborAmount" class="form-label fw-bold">Labor Amount: <span id="hourRate">($50/hr)</span></label>
+                <input type="number" id="laborAmount" class="form-control" formControlName="laborAmount" placeholder="0" min="0"/>
+              </div>
+        
+              <br>
+              <div class="row">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                  <div class="d-md-block">
+                    <label for="lineItemAmount" class="form-label fw-bold">Line Item Amount:</label>
+                    <div>{{ lineItemTotal | currency }}</div>
+                  </div>
+                </div>
+                <div class="d-flex flex-column bd-highlight mb-3">
+                  <div class="d-md-block">
+                    <label for="invoice" class="form-label fw-bold">Invoice Total:</label>
+                    <div>{{ invoiceTotal | currency }}</div>
+                  </div>
+                </div>
+                <button class="btn btn-secondary btn-color" type="submit">Create Invoice</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

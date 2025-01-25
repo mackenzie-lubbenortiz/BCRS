@@ -1,0 +1,270 @@
+/* Global Styles */
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Reset margin and padding for body and html, and set font family */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif !important;
+  background-color: #5d5d5d !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+}
+
+/* Flexbox layout for full height pages */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin-top: 150px; /* Adjust this value based on the height of the navbar */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #0F1D4A; /* Dark Blue */
+  color: #C0C0C0; /* Silver */
+  padding: 15px 20px 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-size: 24px;
+}
+
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+  color: #C0C0C0; /* Silver */
+  text-decoration: none;
+  padding: 8px 16px;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #946B2D; /* Bronze */
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #111c40;
+}
+
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse.show {
+  display: block;
+}
+
+.dropdown-menu {
+  background-color: #0F1D4A; /* Dark Blue */
+  color: #C0C0C0; /* Silver */
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+.dropdown-item {
+  color: #C0C0C0; /* Silver */
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #946B2D; /* Bronze */
+  background-color: transparent;
+}
+
+/* General Container Styles */
+
+/* Container for centered content */
+.container-centered {
+  text-align: center;
+  padding: 50px;
+  background-color: #0F1D4A; /* Dark blue background */
+  color: #C0C0C0; /* Silver text */
+}
+
+/* Container for images with an overlay */
+.image-container {
+  position: relative;
+  display: inline-block;
+  max-width: 50%;
+}
+
+/* General image styling with a border */
+.image-bordered {
+  width: 100%;
+  height: auto;
+  border: 2px solid #223164; /* Border color */
+}
+
+/* Overlay Text Styles */
+
+/* Overlay text for images */
+.overlay-text {
+  position: absolute;
+  top: 18%;
+  left: 3%;
+  color: #C0C0C0; /* Silver text */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Heading inside overlay text */
+.overlay-text h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #946B2D; /* Bronze heading */
+}
+
+/* Paragraph inside overlay text */
+.overlay-text p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #5D5D5D; /* Grey paragraph text */
+}
+
+/* Link Styles */
+
+/* Link button styling */
+.link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #223164; /* Blue link background */
+  color: #C0C0C0; /* Silver text */
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Link button hover effect */
+.link-button:hover {
+  background-color: #946B2D; /* Hover color change to bronze */
+}
+
+/* Photo Attribution Styles */
+
+/* Photo attribution container */
+.photo-attribution {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #C0C0C0; /* Silver text */
+}
+
+/* Links within photo attribution */
+.photo-attribution a {
+  color: #C0C0C0; /* Silver text for links */
+}
+
+/* Hover effect for links within photo attribution */
+.photo-attribution a:hover {
+  color: #C0C0C0; /* Silver text on hover */
+}
+
+/* styling for signin and registration forms */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0F1D4A; /* Dark blue for heading */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #223164; /* Ravenclaw blue for labels */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* styling for register form */
+.question-register-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-card {
+  padding: 30px;
+}
+
+.bg-dark-blue {
+  background-color: #0f1d40 !important;
+  color: #fff !important;
+  border-radius: 5px ;
+  border: 5px 5px #000;
+  padding: 6px;
+}
+
+.form-floating {
+  position: relative;
+}
+
+.form-floating > input,
+.form-floating > label {
+  padding: 1rem;
+}
+
+.form-floating > input:focus ~ label,
+.form-floating > input:not(:placeholder-shown) ~ label {
+  transform: translateY(-1.5rem) scale(.85);
+  color: #495057;
+}

@@ -1,0 +1,103 @@
+<!--
+  Title: invoice-summary.component.html
+  Authors: Phuong Tran
+  Date: 07/21/2024
+  Updated: 07/28/2024 by Brock Hemsouvanh
+  Description: Invoice Summary component template for BCRS application
+-->
+
+<br>
+<br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10"> <!-- Ensure the container does not span the full width -->
+      <div class="card">
+        <div class="card-body">
+          <div class="container mb-5 mt-3">
+            <div class="row d-flex align-items-baseline"></div>
+            <div class="container">
+              <div class="col-md-12">
+                <!-- Title -->
+                <div class="text-center">
+                  <h5 class="pt-2 fw-bold text-color">Bob's Computer Repair Shop</h5>
+                  <h5>Invoice</h5>
+                </div>
+              </div>
+
+              <br>
+              <br>
+              <br>
+              <!-- Customer Info -->
+              <div class="row">
+                <div class="col-xl-8">
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><b>Name: </b> {{customerName}}</li>
+                    <li class="mb-2"><b>Email: </b> {{customerEmail}}</li>
+                    <li class="text mb-4"><span class="fw-bold"> Date: </span> {{orderDate}}</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="table-container"> <!-- Add this container around the table -->
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Service Name</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr *ngFor="let item of lineItems">
+                        <td>{{item.name}}</td>
+                        <td>{{item.price | currency}}</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center">Parts:</th>
+                        <td>{{partsAmount | currency}}</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center">Labor:</th>
+                        <td>{{laborAmount | currency}}</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center">Invoice Total:</th>
+                        <td>{{invoiceTotal | currency}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <br>
+              <br>
+              <div class="row mt-3">
+                <div class="col">
+                  <p class="fw-bold">Please pay before the due date!</p>
+                  <br />
+                </div>
+                <div class="col">
+                  <button (click)="printInvoice()" class="py-2 border-info d-print-none btn btn-color text-center">
+                    <i class="bi bi-printer-fill"></i>
+                    &nbsp;Print Invoice
+                  </button>
+                </div>
+                <br>
+                <br>
+                <br>
+              </div>
+
+              <br>
+              <br>
+              <br>
+              <div class="col-xl-12 text-center fw-bold">
+                <h6>Thank you for your business!</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
